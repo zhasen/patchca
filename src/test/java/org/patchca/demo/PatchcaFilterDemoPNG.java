@@ -45,11 +45,10 @@ public class PatchcaFilterDemoPNG {
 				break;
 			}
 			FileOutputStream fos = new FileOutputStream("patcha_demo" + counter + ".png");
-			ByteArrayOutputStream temp = new ByteArrayOutputStream ();
-			
-			EncoderHelper.getChallangeAndWriteImage(cs, "png", temp);
-			temp.toByteArray();
-			temp.close();
+			//ByteArrayOutputStream temp = new ByteArrayOutputStream ();
+			EncoderHelper.getChallangeAndWriteImage(cs, "png", fos);
+//			temp.toByteArray();
+//			temp.close();
 			
 			fos.close();
 		}
